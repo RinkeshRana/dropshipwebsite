@@ -5,7 +5,11 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <Product />
+      <div className="flex space-x-5">
+        <Product />
+        <Product />
+        <Product />
+      </div>
     </div>
   );
 }
