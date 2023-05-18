@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 function Product() {
   return (
@@ -7,10 +8,12 @@ function Product() {
         <span className="absolute left-3 top-4 w-10 h-5 text-white text-xs  bg-red-500 text-center rounded-full">
           -44%
         </span>
-        <img
-          src="https://cdn.shopify.com/s/files/1/0681/1146/6781/files/Untitled_800x800px_2000x2000px_1.png?v=1683259693&width=360"
-          alt=""
-        />
+        <Link href="/product">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0681/1146/6781/files/Untitled_800x800px_2000x2000px_1.png?v=1683259693&width=360"
+            alt=""
+          />
+        </Link>
       </div>
       <div className="flex flex-col ml-2 gap-3">
         <h1 className="text-lg font-semibold uppercase">streestyle tees</h1>
