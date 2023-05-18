@@ -4,6 +4,7 @@ import {
   StarIcon,
   ShoppingBagIcon,
 } from "@heroicons/react/24/outline";
+
 function Navbar() {
   return (
     <div>
