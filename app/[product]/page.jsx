@@ -1,7 +1,6 @@
 import React from "react";
 import { StarIcon, QuestionMarkCircleIcon,ShareIcon} from "@heroicons/react/24/solid";
 
-
 const page = () => {
   return (
     <div className="grid grid-cols-2 p-3 my-4 mx-2">
