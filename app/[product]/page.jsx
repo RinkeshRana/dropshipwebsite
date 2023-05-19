@@ -1,37 +1,25 @@
 import React from "react";
-import { StarIcon, QuestionMarkCircleIcon,ShareIcon} from "@heroicons/react/24/solid";
+import {
+  StarIcon,
+  QuestionMarkCircleIcon,
+  ShareIcon,
+} from "@heroicons/react/24/solid";
+import DemoImage from "./components/DemoImage";
 
 const page = () => {
   return (
-    <div className="grid grid-cols-2 p-3 my-4 mx-2">
+    <div className="grid grid-rows-2 p-3 my-4 mx-2 md:grid-cols-2 overflow-x-hidden">
       <div className="flex">
-        <div className="flex flex-col gap-4">
-          <img
-            src="https://cdn.shopify.com/s/files/1/0681/1146/6781/files/Untitled_800x800px_2000x2000px_2.png?v=1683259693&width=110"
-            alt=""
-            className="w-20 h-20 border-black border"
-          />
-          <img
-            src="https://cdn.shopify.com/s/files/1/0681/1146/6781/files/Untitled_800x800px_2000x2000px_2.png?v=1683259693&width=110"
-            alt=""
-            className="w-20 h-20"
-          />
-          <img
-            src="https://cdn.shopify.com/s/files/1/0681/1146/6781/files/Untitled_800x800px_2000x2000px_2.png?v=1683259693&width=110"
-            alt=""
-            className="w-20 h-20"
-          />
-          <img
-            src="https://cdn.shopify.com/s/files/1/0681/1146/6781/files/Untitled_800x800px_2000x2000px_2.png?v=1683259693&width=110"
-            alt=""
-            className="w-20 h-20"
-          />
+        <div className="md:flex md:flex-col gap-4 hidden ">
+          <DemoImage />
+          <DemoImage />
+          <DemoImage />
         </div>
-        <div className="relative">
+        <div className="relative flex justify-center items-center">
           <img
             src="https://cdn.shopify.com/s/files/1/0681/1146/6781/files/Untitled_800x800px_2000x2000px_2.png?v=1683259693&width=823"
             alt=""
-            className="w-full h-full bg-cover"
+            className=""
           />
         </div>
       </div>
@@ -48,8 +36,12 @@ const page = () => {
               <StarIcon className="h-5 w-5 text-yellow-400" />
               <StarIcon className="h-5 w-5 text-yellow-400" />
             </div>
-            <h4>4.53</h4>
-            <h1 className="text-sm text-gray-500">(0 reviews)</h1>
+            <div className="flex flex-col md:flex-row md:space-x-3">
+              <h4>4.53</h4>
+              <sspan className="text-sm text-gray-500 text-center">
+                (0 reviews)
+              </sspan>
+            </div>
           </div>
         </div>
 
@@ -70,39 +62,17 @@ const page = () => {
 
         {/* styles */}
         <div className="flex space-x-5 mt-5">
-          <img
-            src="https://cdn.shopify.com/s/files/1/0681/1146/6781/files/Untitled_800x800px_2000x2000px_1_100x.png?v=1683259693"
-            alt=""
-            className="w-24 h-24 border-black border"
-          />
-          <img
-            src="https://cdn.shopify.com/s/files/1/0681/1146/6781/files/Untitled_800x800px_2000x2000px_1_100x.png?v=1683259693"
-            alt=""
-            className="w-24 h-24 border-black border"
-          />
-          <img
-            src="https://cdn.shopify.com/s/files/1/0681/1146/6781/files/Untitled_800x800px_2000x2000px_1_100x.png?v=1683259693"
-            alt=""
-            className="w-24 h-24 border-black border"
-          />
-          <img
-            src="https://cdn.shopify.com/s/files/1/0681/1146/6781/files/Untitled_800x800px_2000x2000px_1_100x.png?v=1683259693"
-            alt=""
-            className="w-24 h-24 border-black border"
-          />
-          <img
-            src="https://cdn.shopify.com/s/files/1/0681/1146/6781/files/Untitled_800x800px_2000x2000px_1_100x.png?v=1683259693"
-            alt=""
-            className="w-24 h-24 border-black border"
-          />
+          <DemoImage />
+          <DemoImage />
+          <DemoImage />
+          <DemoImage />
         </div>
-
         {/* size */}
 
         <div className="font-semibold">
           Size: <span className="text-xl font-semibold text-center">XS</span>
         </div>
-        <div className="mt-4 flex space-x-5">
+        <div className="mt-4 flex space-x-3 md:space-x-5">
           <div className="border border-black bg-black text-white rounded-lg p-2 font-semibold">
             XS
           </div>
@@ -141,7 +111,7 @@ const page = () => {
         <button className="w-full p-3 bg-black text-white mt-5">
           Buy it now
         </button>
-        <div className="flex mt-5">
+        <div className="flex mt-5 justify-center items-center space-x-6">
           <div className="p-3 flex space-x-2 items-center">
             <QuestionMarkCircleIcon className="h-5 w-5 text-gray-500 text-center" />
             <span className="text-center">Ask a Question</span>
@@ -151,8 +121,7 @@ const page = () => {
             <span className="text-center">Share</span>
           </div>
         </div>
-
-        <hr className="w-full" />
+        <hr className="w-full " />
       </div>
     </div>
   );
