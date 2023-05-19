@@ -1,4 +1,3 @@
-import Features from "./components/Features";
 import Hurry from "./components/Hurry";
 import Navbar from "./components/Navbar";
 import Product from "./components/Product";
@@ -6,11 +5,15 @@ import Product from "./components/Product";
 export default function Home() {
   return (
     <div>
-      <Navbar />
       <h2 className="text-2xl md:text-4xl text-center m-10 underline underline-offset-8 ">
         Featured Products
       </h2>
-      <div className="flex space-x-5 flex-wrap justify-center space-y-10">
+      <div
+        className="flex space-x-5 flex-wrap justify-center space-y-10
+        p-10
+      w-full md:space-y-0 md:space-x-10 md:flex-row md:justify-evenly
+      "
+      >
         <Product
           image="/81fPKd-2AYL._AC_SL1500_.jpg"
           productName="Product name"
@@ -84,9 +87,7 @@ export default function Home() {
           productDiscount="-20%"
         />
       </div>
-      <div>
-        <Features />
-      </div>
+
       <div>
         <Hurry />
       </div>

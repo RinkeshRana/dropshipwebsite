@@ -1,5 +1,9 @@
 import React from "react";
-import { StarIcon, QuestionMarkCircleIcon,ShareIcon} from "@heroicons/react/24/solid";
+import {
+  StarIcon,
+  QuestionMarkCircleIcon,
+  ShareIcon,
+} from "@heroicons/react/24/solid";
 
 const page = () => {
   return (

@@ -13,7 +13,7 @@ function Navbar() {
 
   return (
     <div>
-      <nav className="text-gray-600 font-semibold">
+      <nav className="text-gray-600 font-semibold bg-white shadow-lg">
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
             <span className="ml-3 text-xl">Tailblocks</span>
@@ -23,7 +23,8 @@ function Navbar() {
             className="md:hidden"
             onClick={() => setShowMenu(!showMenu)} // toggle the menu state
           >
-            {showMenu ? ( // show the close icon if the menu is open
+            {showMenu ? (
+              // show the close icon if the menu is open
               <XMarkIcon className="h-5 w-5" />
             ) : (
               // show the menu icon if the menu is closed
