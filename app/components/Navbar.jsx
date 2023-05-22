@@ -10,9 +10,16 @@ import {
 } from "@heroicons/react/outline";
 import Link from "next/link";
 import Navigation from "./Navigation";
+import SideCart from "./SideCart";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false); // state to toggle the menu
+  const [showCart, setShowCart] = useState(false);
+
+  // Function to send data to parent
+  const setCartStatus = (childData) => {
+    setShowCart(childData);
+  };
 
   return (
     <div className="">
@@ -43,7 +50,10 @@ function Navbar() {
               <button className="flex items-center">
                 <StarIcon className="h-5 md:h-8 w-6" />
               </button>
-              <button className="flex items-center">
+              <button
+                className="flex items-center"
+                onClick={() => setShowCart(!showCart)}
+              >
                 <ShoppingBagIcon className="h-5 md:h-8 w-6" />
               </button>
             </div>
@@ -88,6 +98,18 @@ function Navbar() {
             <a href="#">Accessories</a>
           </div>
         </div>
+      </div>
+      <div
+        className={` ${
+          showCart
+            ? " translate-x duration-700 "
+            : " translate-x-full duration-500 "
+        }
+          
+   fixed top-0 right-0 w-3/4 md:w-1/2 lg:w-1/4 xl:w-1/5 2xl:w-1/6 h-full z-50 backdrop-blur-2xl shadow 
+  `}
+      >
+        <SideCart cartStatus={setCartStatus} />
       </div>
     </div>
   );

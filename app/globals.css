@@ -31,19 +31,28 @@
 } */
 
 
-.tab {
-  padding: 10px 15px;
-  transition: background-color 0.3s ease-in-out;
+.scrollbar::-webkit-scrollbar {
+  width: 0; /* change the width of the scrollbar */
 }
 
-.tab:hover {
-  background-color: #e2e8f0;
+::-webkit-scrollbar {
+  width: 5px; /* change the width of the scrollbar */
 }
 
-.tab.active {
-  background-color: #e2e8f0;
+::-webkit-scrollbar-track {
+  background: gray; /* change the background of the track */
+
+  margin: 2px 0;
+  /* top rounded */
+  border-radius: 10px;
+  /* bottom rounded*/
+  box-shadow: inset 0px 0px 5px white;
+
 }
 
-.tab.active:hover {
-  background-color: #e2e8f0;
+::-webkit-scrollbar-thumb {
+  background: rgb(70, 66, 66); /* change the background of the thumb */
+  
 }
+
+

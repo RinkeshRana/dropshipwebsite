@@ -1,12 +1,14 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import {
   StarIcon,
   QuestionMarkCircleIcon,
   ShareIcon,
 } from "@heroicons/react/solid";
 import DemoImage from "./components/DemoImage";
-
 const page = () => {
+  const [productCount, setProductCount] = useState(1);
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 p-3 my-4 mx-2">
       <div className="flex">
@@ -72,8 +74,8 @@ const page = () => {
         <div className="font-semibold mt-4">
           Size: <span className="text-xl font-semibold text-center">XS</span>
         </div>
-        <div className="mt-4 flex space-x-5">
-          <div className="border border-black bg-black text-white rounded-lg p-2 font-semibold">
+        <div className="mt-4 flex space-x-5 flex-wrap ">
+          <div className="border border-black rounded-lg p-2 font-semibold bg-black text-white">
             XS
           </div>
           <div className="border border-black rounded-lg p-2 font-semibold">
@@ -98,16 +100,40 @@ const page = () => {
         {/* quantity */}
         <div className="mt-8 flex space-x-9">
           <div className="flex border border-gray-500 justify-center items-center rounded-md">
-            <button className="w-10 h-10 text-xl">-</button>
-            <p className="text-xl">0</p>
-            <button className="w-10 h-10 text-xl">+</button>
+            <button
+              className="w-10 h-10 text-xl"
+              onClick={() => {
+                if (productCount > 1) {
+                  setProductCount(productCount - 1);
+                } else {
+                  setProductCount(1);
+                }
+              }}
+            >
+              -
+            </button>
+            <p className="text-xl">{productCount}</p>
+            <button
+              className="w-10 h-10 text-xl"
+              onClick={() => {
+                if (productCount < 10) {
+                  setProductCount(productCount + 1);
+                }
+              }}
+            >
+              +
+            </button>
           </div>
-          <button className="border-black p-3 border w-full">
+          <button
+            className="border-black p-3 border w-full rounded-md
+          hover:bg-black hover:text-white transition duration-300 ease-in-out
+          "
+          >
             Add to cart
           </button>
         </div>
 
-        <button className="w-full p-3 bg-black text-white mt-5">
+        <button className="w-full p-3 bg-black text-white mt-5 rounded-md">
           Buy it now
         </button>
         <div className="flex mt-5">
