@@ -10,7 +10,7 @@ const ProductProvider = ({ children }) => {
   // Function to insert a product into the database
   const insertProduct = async (productData) => {
     try {
-      const response = await axios.post("/api/products", {
+      const response = await axios.post("/api/getproduct", {
         product: productData,
       });
       const insertedProduct = response.data.data;

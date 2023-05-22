@@ -1,5 +1,6 @@
+"use client";
 import React, { useState, useContext } from "react";
-import { ProductContext } from "../ProductContext";
+import { ProductContext } from "../context/productcontext";
 
 const ProductForm = () => {
   const [title, setTitle] = useState("");
@@ -169,6 +170,5 @@ const ProductForm = () => {
     </form>
   );
 };
-
 
 export default ProductForm;
