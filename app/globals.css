@@ -16,6 +16,10 @@
   }
 }
 
+::selection {
+  background: rgb(0, 255, 136);
+}
+
 /* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -25,3 +29,21 @@
     )
     rgb(var(--background-start-rgb));
 } */
+
+
+.tab {
+  padding: 10px 15px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.tab:hover {
+  background-color: #e2e8f0;
+}
+
+.tab.active {
+  background-color: #e2e8f0;
+}
+
+.tab.active:hover {
+  background-color: #e2e8f0;
+}

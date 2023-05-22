@@ -1,96 +1,110 @@
 import Hurry from "./components/Hurry";
-import Navbar from "./components/Navbar";
 import Product from "./components/Product";
+import PromoSection from "./components/PromoSection";
+import Testimonial from "./components/Testimonial";
 
 export default function Home() {
   return (
     <div>
+      <PromoSection />
       <h2 className="text-2xl md:text-4xl text-center m-10 underline underline-offset-8 ">
         Featured Products
       </h2>
-      <div
-        className="flex space-x-5 flex-wrap justify-center space-y-10
-        p-10
-      w-full md:space-y-0 md:space-x-10 md:flex-row md:justify-evenly
-      "
-      >
+      {/* div with grids with all products in center */}
+      {/* <div className="flex justify-center mx-12"> */}
+      <div className="flex flex-wrap justify-center ">
         <Product
-          image="/81fPKd-2AYL._AC_SL1500_.jpg"
+          image="/2.webp"
           productName="Product name"
           productPrice="$19.99"
           productDiscount="-20%"
         />
         <Product
-          image="/71li-ujtlUL._AC_UX679_.jpg"
+          image="/2.webp"
           productName="Product name"
           productPrice="$19.99"
           productDiscount="-20%"
         />
         <Product
-          image="/61IBBVJvSDL._AC_SY879_.jpg"
+          image="/2.webp"
           productName="Product name"
           productPrice="$19.99"
           productDiscount="-20%"
         />
         <Product
-          image="/81fPKd-2AYL._AC_SL1500_.jpg"
+          image="/2.webp"
           productName="Product name"
           productPrice="$19.99"
           productDiscount="-20%"
         />
         <Product
-          image="/71li-ujtlUL._AC_UX679_.jpg"
+          image="/2.webp"
           productName="Product name"
           productPrice="$19.99"
           productDiscount="-20%"
         />
         <Product
-          image="/61IBBVJvSDL._AC_SY879_.jpg"
+          image="/2.webp"
           productName="Product name"
           productPrice="$19.99"
           productDiscount="-20%"
         />
         <Product
-          image="/81fPKd-2AYL._AC_SL1500_.jpg"
+          image="/2.webp"
           productName="Product name"
           productPrice="$19.99"
           productDiscount="-20%"
         />
         <Product
-          image="/71li-ujtlUL._AC_UX679_.jpg"
+          image="/2.webp"
           productName="Product name"
           productPrice="$19.99"
           productDiscount="-20%"
         />
         <Product
-          image="/61IBBVJvSDL._AC_SY879_.jpg"
+          image="/2.webp"
           productName="Product name"
           productPrice="$19.99"
           productDiscount="-20%"
         />
         <Product
-          image="/81fPKd-2AYL._AC_SL1500_.jpg"
+          image="/2.webp"
           productName="Product name"
           productPrice="$19.99"
           productDiscount="-20%"
         />
         <Product
-          image="/71li-ujtlUL._AC_UX679_.jpg"
+          image="/2.webp"
           productName="Product name"
           productPrice="$19.99"
           productDiscount="-20%"
         />
         <Product
-          image="/61IBBVJvSDL._AC_SY879_.jpg"
+          image="/2.webp"
+          productName="Product name"
+          productPrice="$19.99"
+          productDiscount="-20%"
+        />
+        <Product
+          image="/2.webp"
+          productName="Product name"
+          productPrice="$19.99"
+          productDiscount="-20%"
+        />
+        <Product
+          image="/2.webp"
           productName="Product name"
           productPrice="$19.99"
           productDiscount="-20%"
         />
       </div>
+      {/* </div> */}
 
-      <div>
+      {/* <div>
         <Hurry />
-      </div>
+      </div> */}
+      <div className="m-12" />
+      <Testimonial />
     </div>
   );
 }
