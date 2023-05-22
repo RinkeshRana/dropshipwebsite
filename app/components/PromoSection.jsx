@@ -83,7 +83,7 @@ export default function PromoSection() {
 
               <a
                 href="#"
-                className="inline-block text-center  rounded-md py-3 px-8 font-medium border-2 border-black text-black hover:bg-black hover:text-white 
+                className="inline-block text-center  rounded-md py-3 px-8 font-medium border-2 border-black text-black hover:bg-black hover:text-white
                 duration-500"
               >
                 Shop Collection
