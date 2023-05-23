@@ -8,20 +8,20 @@ import DemoImage from "./components/DemoImage";
 
 const page = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 p-3 my-4 mx-2">
+    <div className="grid grid-cols-1 md:grid-cols-2 p-3 my-4 mx-2 space-x-5">
       <div className="flex">
         <img
-          src="https://cdn.shopify.com/s/files/1/0681/1146/6781/files/Untitled_800x800px_2000x2000px_1_2000x2000.png?v=1683259693"
+          src="https://cdn.shopify.com/s/files/1/0681/1146/6781/products/7526b1e0b34703e6b4a629ae27880e9a_7e4e8e45-a6f5-4e7b-af85-d6f0eb00467f.jpg?v=1684816466&width=360"
           alt=""
-          className="w-auto h-auto"
+          className="w-auto h-auto bg-cover"
         />
       </div>
 
       {/* product ratings and title */}
-      <div>
+      <div className="mt-7">
         <div className="flex justify-between">
           <h1 className="text-2xl font-semibold">Streetstyle Tees</h1>
-          <div className="flex justify-center space-x-5">
+          <div className="flex justify-center space-x-4">
             <div className="flex">
               <StarIcon className="h-5 w-5 text-yellow-400" />
               <StarIcon className="h-5 w-5 text-yellow-400" />
@@ -38,7 +38,7 @@ const page = () => {
         <div className="flex mt-6 space-x-6 justify-start items-center">
           <h1 className="text-2xl font-semibold">$19.99 USD</h1>
           <s className="text-red-500">$35.99 USD</s>
-          <p className="rounded-full bg-red-500 text-white text-sm p-1">
+          <p className="rounded-full bg-red-500 text-white text-xs p-1 text-center">
             save 44%
           </p>
         </div>
@@ -72,7 +72,7 @@ const page = () => {
         <div className="font-semibold mt-4">
           Size: <span className="text-xl font-semibold text-center">XS</span>
         </div>
-        <div className="mt-4 flex space-x-5">
+        <div className="mt-4 flex space-x-3">
           <div className="border border-black bg-black text-white rounded-lg p-2 font-semibold">
             XS
           </div>

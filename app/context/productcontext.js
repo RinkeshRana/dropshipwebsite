@@ -2,6 +2,7 @@
 import React, { createContext, useState } from "react";
 import axios from "axios";
 
+
 const ProductContext = createContext();
 
 const ProductProvider = ({ children }) => {
@@ -10,11 +11,10 @@ const ProductProvider = ({ children }) => {
   // Function to insert a product into the database
   const insertProduct = async (productData) => {
     try {
-      const response = await axios.post("/api/getproduct", {
+      const response = await axios.post("/api/addproduct", {
         product: productData,
       });
-      const insertedProduct = response.data.data;
-
+      const insertedProduct = response.data;
       setProducts((prevProducts) => [...prevProducts, insertedProduct]);
     } catch (error) {
       console.error("Error inserting product:", error);
