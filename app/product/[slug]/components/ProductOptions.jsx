@@ -7,10 +7,7 @@ function ProductOptions(props) {
 
   const handleOptionChange = (e) => {
     const { name, value } = e.target;
-    if (option[name] === value) {
-      setOption({ ...option, [name]: "" });
-      return;
-    }
+
     setOption({ ...option, [name]: value });
     console.log(option);
   };
