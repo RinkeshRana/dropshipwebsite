@@ -1,12 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  StarIcon,
-  QuestionMarkCircleIcon,
-  ShareIcon,
-} from "@heroicons/react/solid";
-import DemoImage from "./components/DemoImage";
 import ProductDetails from "./components/ProductDetails";
 
 const page = () => {
@@ -16,7 +10,6 @@ const page = () => {
     title: "Streetstyle Tees",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.",
-
     price: 19.99,
     discount: 35.99,
     discountPercent: 44,
@@ -32,15 +25,37 @@ const page = () => {
       "https://cdn.shopify.com/s/files/1/0681/1146/6781/products/Sc38f657dc8424971b88d45e89ba397ceG.jpg?v=1680094679",
       "https://cdn.shopify.com/s/files/1/0681/1146/6781/products/Sfd85103919294ea49f0d7fc02359bf43S.jpg?v=1680094680",
       "https://cdn.shopify.com/s/files/1/0681/1146/6781/products/2316126763416.jpg?v=1677586934",
+      "https://cdn.shopify.com/s/files/1/0681/1146/6781/products/Sc38f657dc8424971b88d45e89ba397ceG.jpg?v=1680094679",
+      "https://cdn.shopify.com/s/files/1/0681/1146/6781/products/Sfd85103919294ea49f0d7fc02359bf43S.jpg?v=1680094680",
+      "https://cdn.shopify.com/s/files/1/0681/1146/6781/products/2316126763416.jpg?v=1677586934",
     ],
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["Yellow", "Green", "Red", "Blue", "Black"],
-    tailwindColors: [
-      "bg-yellow-500",
-      "bg-green-500",
-      "bg-red-500",
-      "bg-blue-500",
-      "bg-black",
+
+    options: [
+      {
+        name: "Size",
+        values: [
+          {
+            name: "S",
+            subvalues: ["Red", "White"],
+          },
+          {
+            name: "M",
+            subvalues: ["Red", "White", "Black", "Blue"],
+          },
+          {
+            name: "L",
+            subvalues: ["Red", "White", "Black", "Blue", "Green"],
+          },
+          {
+            name: "XL",
+            subvalues: ["Red", "White", "Black", "Blue", "Green", "Yellow"],
+          },
+        ],
+      },
+      {
+        name: "Material",
+        values: ["Cotton", "Polyester", "Silk"],
+      },
     ],
   };
 
